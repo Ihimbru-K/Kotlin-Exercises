@@ -1,2 +1,2 @@
 # Kotlin-Programming
-Here I share the various concepts covered in my jetbrains Kotlin course
+Here I share the various concepts covered in the jetbrains Kotlin course which I am currently following
