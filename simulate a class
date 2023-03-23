@@ -1,0 +1,15 @@
+class classRoom{
+
+    fun NumBenches(students : Int =20) : Int{
+
+        val benches = students.toFloat()/3
+        val num = benches.roundToInt()
+        return num
+    }
+}
+fun main(){
+    
+    val myClass = classRoom()
+    print(myClass.NumBenches())
+
+}
