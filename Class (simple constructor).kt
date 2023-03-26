@@ -9,4 +9,22 @@ fun main(){
     println(car.brand)
 
 
+    class Boy(val age : Int)
+
+    val kboy = Boy(21)
+    println(kboy.age)
+
+
+    class Rectangle(var length : Int, val width : Int)
+
+    val rect = Rectangle(3,5)
+    println(rect.length)
+    rect.length = 33
+    println(rect.length)
+
+
+
+
+
+
 }
