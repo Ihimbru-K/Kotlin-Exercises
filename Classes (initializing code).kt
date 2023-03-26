@@ -1,13 +1,6 @@
 import kotlin.time.measureTimedValue
 
-/*
-Within the init block we change the value of fuelLevel based on the value of
-yearOfMake. Since this requires access to fuelLevel, it can’t be earlier than the
-declaration of fuelLevel
- */
-
-fun main (){
-    class Car(val yearMade : Int, theColor : String)
+  class Car(val yearMade : Int, theColor : String)
       var FuelLevel = 100
 
     var color = theColor
@@ -19,5 +12,14 @@ fun main (){
     init {
         if(yearMade < 2020){ FuelLevel = 90}
     }
+
+/*
+Within the init block we change the value of fuelLevel based on the value of
+yearOfMake. Since this requires access to fuelLevel, it can’t be earlier than the
+declaration of fuelLevel
+ */
+
+fun main (){
+  
 
 }
