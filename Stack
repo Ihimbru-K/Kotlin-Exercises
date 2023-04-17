@@ -1,0 +1,29 @@
+/*
+This code creates a new Stack object with integer elements, 
+pushes three elements onto the stack, and then pops them off one by one. 
+The output should be:
+
+3
+2
+1
+*/
+
+
+
+class Stack<T> {
+    private val elements = mutableListOf<T>()
+    fun push(element: T) = elements.add(element)
+    fun pop(): T? = elements.removeLastOrNull()
+    fun isEmpty() = elements.isEmpty()
+    fun size() = elements.size
+}
+
+fun main() {
+    val stack = Stack<Int>()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    println(stack.pop()) // 3
+    println(stack.pop()) // 2
+    println(stack.pop()) // 1
+}
