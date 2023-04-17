@@ -1,0 +1,21 @@
+/*
+This code creates a new Queue object with type parameter String, 
+enqueues three strings, and then dequeues and prints the first string (“A”).
+*/
+
+class Queue<T> {
+    private val elements = mutableListOf<T>()
+    fun enqueue(element: T) = elements.add(element)
+    fun dequeue(): T? = if (elements.isNotEmpty()) elements.removeAt(0) else null
+    fun peek(): T? = elements.firstOrNull()
+    fun size() = elements.size
+    fun isEmpty() = elements.isEmpty()
+}
+
+fun main() {
+    val queue = Queue<String>()
+    queue.enqueue("A")
+    queue.enqueue("B")
+    queue.enqueue("C")
+    println(queue.dequeue())
+}
