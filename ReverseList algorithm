@@ -1,0 +1,25 @@
+/*
+This code defines a class called ListReverser that has a single function called reverse. 
+The function takes a mutable list as input and returns a new reversed mutable list.
+The main function creates an instance of the ListReverser class and uses it to reverse the original list.
+
+*/
+
+class ListReverser<T> {
+    fun reverse(list: MutableList<T>): MutableList<T> {
+        val reversedList = mutableListOf<T>()
+        for (i in list.size - 1 downTo 0) {
+            reversedList.add(list[i])
+        }
+        return reversedList
+    }
+}
+
+fun main() {
+    val list = mutableListOf(1, 2, 3, 4, 5)
+    println("Original list: $list")
+    val reverser = ListReverser<Int>()
+    val reversedList = reverser.reverse(list)
+    println("Reversed list: $reversedList")
+}
+
