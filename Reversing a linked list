@@ -1,0 +1,23 @@
+/*
+This algorithm uses three pointers prev, curr, and nextTemp. 
+The prev pointer is initially set to null, and the curr pointer is set to the head of the linked list. 
+The algorithm then iterates through each node in the linked list, 
+reversing the direction of each node’s pointer so that it points to the previous node instead of the next node.
+The nextTemp pointer is used to temporarily store a reference to the next node in the linked list 
+before it is overwritten by a new reference to the previous node.
+The algorithm returns a reference to the new head of the reversed linked list, 
+which is stored in the prev pointer.
+*/
+
+
+fun reverseList(head: ListNode?): ListNode? {
+    var prev: ListNode? = null
+    var curr = head
+    while (curr != null) {
+        val nextTemp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = nextTemp
+    }
+    return prev
+}
