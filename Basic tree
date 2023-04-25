@@ -1,0 +1,15 @@
+fun main() {
+    val tree = Branch(
+        Branch(
+            Leaf(1),
+            Leaf(2)
+        ),
+        Branch(
+            Leaf(3),
+            Branch(
+                Leaf(4),
+                Leaf(5)
+            )
+        )
+    )
+    println(size(tree))
