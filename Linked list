@@ -1,0 +1,34 @@
+class Node<T>(val value: T) {
+    var next: Node<T>? = null
+}
+
+class LinkedList<T> {
+    private var head: Node<T>? = null
+
+    fun push(value: T) {
+        val node = Node(value)
+        node.next = head
+        head = node
+    }
+
+    fun pop(): T? {
+        if (head == null) return null
+
+        val value = head!!.value
+        head = head!!.next
+
+        return value
+    }
+
+    override fun toString(): String {
+        var current = head
+        var str = ""
+
+        while (current != null) {
+            str += "${current.value} -> "
+            current = current.next
+        }
+
+        return str + "null"
+    }
+}
