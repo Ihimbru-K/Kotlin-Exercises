@@ -1,0 +1,39 @@
+class Node(var data: Int) {
+    var next: Node? = null
+}
+
+class LinkedList {
+    var head: Node? = null
+
+    fun reverse(current: Node?, previous: Node?): Node? {
+        if (current == null) return previous
+        val next = current.next
+        current.next = previous
+        return reverse(next, current)
+    }
+
+    fun printList() {
+        var node = head
+        while (node != null) {
+            print("${node.data} ")
+            node = node.next
+        }
+    }
+}
+
+fun main(args: Array<String>) {
+    val linkedList = LinkedList()
+    linkedList.head = Node(1)
+    linkedList.head?.next = Node(2)
+    linkedList.head?.next?.next = Node(3)
+    linkedList.head?.next?.next?.next = Node(4)
+    linkedList.head?.next?.next?.next?.next = Node(5)
+
+    println("Original Linked list")
+    linkedList.printList()
+
+    linkedList.head = linkedList.reverse(linkedList.head, null)
+
+    println("\nReversed linked list ")
+    linkedList.printList()
+}
