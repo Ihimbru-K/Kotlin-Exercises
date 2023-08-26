@@ -1,0 +1,34 @@
+abstract class Animal(val name: String) {
+    abstract fun makeSound()
+}
+
+class Dog(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("The dog is barking")
+    }
+}
+
+class Cat(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("The cat is meowing")
+    }
+}
+
+fun main() {
+    val dog = Dog("Buddy")
+    val cat = Cat("Kitty")
+
+    val animals = arrayOf(dog, cat)
+
+    for (animal in animals) {
+        animal.makeSound()
+    }
+}
+
+/
+In this example, the Animal class is an abstract class that has an abstract method called makeSound(). 
+The Dog and Cat classes are derived from the Animal class and they implement the makeSound() method.
+The main() function creates an array of animals that contains both dogs and cats. 
+The for loop iterates over each animal in the array and calls its makeSound() method.
+
+/

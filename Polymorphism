@@ -1,0 +1,35 @@
+open class Animal(val name: String) {
+    open fun makeSound() {
+        println("The animal is making a sound")
+    }
+}
+
+class Dog(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("The dog is barking")
+    }
+}
+
+class Cat(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("The cat is meowing")
+    }
+}
+
+fun main() {
+    val dog = Dog("Buddy")
+    val cat = Cat("Kitty")
+
+    val animals = arrayOf(dog, cat)
+
+    for (animal in animals) {
+        animal.makeSound()
+    }
+}
+/
+In this example, the Dog and Cat classes are derived from the Animal class.
+The Dog and Cat classes have their own implementation of the makeSound() method which overrides 
+the method with the same name in the Animal class. The main() function creates an array of animals that contains both dogs and cats. 
+The for loop iterates over each animal in the array and calls its makeSound() method.
+
+/

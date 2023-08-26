@@ -1,0 +1,18 @@
+open class Animal(val name: String) {
+    open fun makeSound() {
+        println("The animal is making a sound")
+    }
+}
+
+class Dog(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("The dog is barking")
+    }
+}
+/
+In this example, the Dog class is derived from the Animal class. 
+The Dog class inherits all the properties and methods of
+the Animal class and also has its own method makeSound()
+which overrides the method with the same name in the Animal class1.
+
+/

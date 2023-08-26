@@ -1,0 +1,14 @@
+class Person(private val name: String, private val age: Int) {
+  fun getName(): String {
+    return name
+  }
+
+  fun getAge(): Int {
+    return age
+  }
+}
+/
+In this example, the name and age properties are marked as private, 
+which means they cannot be accessed from outside the class. 
+The getName() and getAge() methods are used to access these properties from outside the class.
+/
