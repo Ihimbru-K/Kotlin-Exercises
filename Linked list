@@ -1,3 +1,22 @@
+
+class LinkedList<T> {
+
+  private var head: Node<T>? = null
+  private var tail: Node<T>? = null
+  private var size = 0
+
+  fun isEmpty(): Boolean {
+    return size == 0
+  }
+
+  override fun toString(): String {
+    if (isEmpty()) {
+      return "Empty list"
+    } else {
+      return head.toString()
+    }
+  }
+
 class Node<T>(val value: T) {
     var next: Node<T>? = null
 }
@@ -31,4 +50,5 @@ class LinkedList<T> {
 
         return str + "null"
     }
+
 }
